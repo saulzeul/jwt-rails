@@ -18,6 +18,8 @@ gem 'puma', '~> 3.7'
 gem 'bcrypt', '~> 3.1.7'
 # Use jwt for encoding and decoding tokens
 gem 'jwt'
+# Use active_model_serializers for serializer model in the api
+gem 'active_model_serializers'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
