@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :update, :destroy]
+  #before_action :set_user, only: [:show, :update, :destroy]
+  before_action :authenticate_user #only: [:show]
+  before_action :set_user, only: [:show]
 
   # GET /users
   def index
@@ -13,6 +15,11 @@ class UsersController < ApplicationController
     render json: @user
   end
 
+  # Current user
+  def current
+    render json: current_user
+  end
+  
   # POST /users
   def create
     @user = User.new(user_params)
@@ -37,7 +44,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
   end
-
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user

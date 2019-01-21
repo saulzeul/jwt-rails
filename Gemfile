@@ -16,13 +16,12 @@ gem 'puma', '~> 3.7'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-# Use jwt for encoding and decoding tokens
-gem 'jwt'
 # Use active_model_serializers for serializer model in the api
 gem 'active_model_serializers'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
+# Use gem knock for jwt authenticate
+gem 'knock'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 

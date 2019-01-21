@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  post 'user_token' => 'user_token#create'
+  get 'user_current' => 'users#current'
   resources :users
   resources :roles
   resources :areas
