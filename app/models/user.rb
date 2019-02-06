@@ -7,4 +7,11 @@ class User < ApplicationRecord
        username = request.params["auth"] && request.params["auth"]["username"]
        self.find_by username: username
   end
+  def to_token_payload
+    {
+      sub: id,
+      username: username,
+      fullname: fullname,
+    }
+  end  
 end
