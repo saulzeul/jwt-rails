@@ -11,7 +11,7 @@ class User < ApplicationRecord
     {
       sub: id,
       username: username,
-      fullname: fullname,
+      role_id: role_id,
     }
   end  
 end
